@@ -3,13 +3,22 @@ import java.util.Scanner;
 public class BooleanExpressions {
   public static void main(String[] args) {
     Scanner keyboard = new Scanner(System.in);
-    boolean a, b, c, d, e, f;
+    boolean a, b, c, d, e, f, Z;
     double x, y;
+    int z, zz;
+
+
 
     System.out.print("Give me two numbers. First: ");
     x = keyboard.nextDouble();
     System.out.print("Second: ");
     y = keyboard.nextDouble();
+    System.out.print("Let do it again, enter the first of two numbers: ");
+    z = keyboard.nextInt();
+    System.out.print("Second: ");
+    zz = keyboard.nextInt();
+
+
 
     a = (x <  y); // a = (3 <  4); true
     b = (x <= y); // b = (3 <= y); true
@@ -17,6 +26,8 @@ public class BooleanExpressions {
     d = (x != y); // d = (3 != 4); true
     e = (x >  y); // e = (3 >  4); false
     f = (x >= y); // f = (3 >= 4); false
+    Z = (z == zz);
+
 
 // below, the last char are actually the boolen variables...
     System.out.println(x + " is LESS THAN " + y + ": " + a);
@@ -25,6 +36,7 @@ public class BooleanExpressions {
     System.out.println(x + " is NOT EQUAL TO " + y + ": " + d);
     System.out.println(x + " is GREATER THAN " + y + ": " + e);
     System.out.println(x + " is GREATER THAN / EQUAL TO " + y + ": " + f);
+    System.out.println(z + " is EQUAL TO " + zz);
     System.out.println();
 
     System.out.println( !(x < y) + " " + (x >= y) ); // false | false
@@ -33,6 +45,9 @@ public class BooleanExpressions {
     System.out.println( !(x != y) + " " + (x == y) ); // false | false
     System.out.println( !(x > y) + " " + (x <= y) ); // true | true
     System.out.println( !(x >= y) + " " + (x < y) ); // true | true
+
+
+
 
     /* the six operators
     1. less than <
