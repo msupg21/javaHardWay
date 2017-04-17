@@ -32,5 +32,12 @@ public class RudeQuestions {
     hours = keyboard.nextInt();
     System.out.println("Well, " + hours + " of sleep a night is not bad " +name + "!");
 
+
+
+
+
+
+
+
   }
 }
