@@ -16,5 +16,7 @@ public class ForgetfulMachine {
     System.out.println("Is there anything else you would like to say");
     keyboard.next();
 
+    //modified
+
   }
 }
