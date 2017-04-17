@@ -7,8 +7,8 @@ public class BMICalculator {
 
 
     System.out.print("Your height in feet: ");
-    feet = keyboard.nextInt();
-    System.out.println("Now enter your inches: ");
+    feet = keyboard.nextDouble();
+    System.out.print("Now enter your inches: ");
     inc = keyboard.nextDouble();
 
     inc2 = feet * 12;
