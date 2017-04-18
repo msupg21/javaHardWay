@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class WeaselOrNot {
   public static void main(String[] args) {
     Scanner keyboard = new Scanner(System.in);
-    String word;
+    String word, password1, password2;
     boolean yep, nope;
 
     System.out.println("Type the word \"weasel\" , please.");
@@ -15,6 +15,21 @@ public class WeaselOrNot {
 
     System.out.println("You typed what was requested: " + yep);
     System.out.println("You ignored polite instruction: " + nope);
+
+    System.out.println("Please enter a password: ");
+    password1 = keyboard.next();
+
+    System.out.println("Please re-enter a password: ");
+    password2 = keyboard.next();
+
+
+    if (password1.equals(password2)) { // must use the .equals() methond to compare strings
+      System.out.println("Passwords match!");
+    }
+    else {
+      System.out.println("Passwords don't match!");
+    }
+
 
   }
 }
