@@ -4,8 +4,8 @@ public class ShallowGrandmother {
   public static void main(String[] args) {
     Scanner keyboard = new Scanner(System.in);
     int age;
-    double income, cute, happy;
-    boolean allowed, allowed2;
+    double income, income2, cute, happy;
+    boolean allowed, allowed2, allowed3;
 
     System.out.print("Enter your age: ");
     age = keyboard.nextInt();
@@ -27,6 +27,14 @@ public class ShallowGrandmother {
     being older than 25 and making her happy.  No longer is income or cuteness have to check
     out right */
 
-    System.out.print("After reconsidering, Grandma has made her decision on dating him: " + allowed2);
+    System.out.println("After reconsidering, Grandma has made her decision on dating him: " + allowed2);
+
+    System.out.println("Now, nothing creates more happiness than money. ");
+    System.out.print("How much money will he make next year?: ");
+    income2 = keyboard.nextDouble();
+
+    allowed3 = (age > 25 || income2 > 60000 || happy > 7);
+    System.out.println("yea, go for the money! Are you allowed to date him now?: " + allowed3);
+
   }
 }
