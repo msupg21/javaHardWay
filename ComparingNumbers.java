@@ -29,6 +29,7 @@ public class ComparingNumbers {
       System.out.println(first + " is NOT EQUAL to " + second);
       System.out.println("Hey." );
 
+// again with ints and double .. Use <,>,<=,>=,++ to compare)
 
   }
 }
