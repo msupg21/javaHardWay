@@ -18,6 +18,9 @@ class AgeMessage {
       if (age < 18) {
         System.out.println("\ttoo young to get a tattoo");
       }
+      if (age == 18) {
+        System.out.println("\tYou are no longer a minor");
+      }
       if (age < 21) {
         System.out.println("\ttoo young to drink alcohol");
       }
