@@ -41,4 +41,4 @@ public class ClubBouncer {
 }
 /* note:  every else statement has to follow imeditaly after a if statement.
 If there is any other syntax between the last if block and else statement, the program
-will crashn */
+will crash */
