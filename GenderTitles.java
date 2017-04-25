@@ -34,9 +34,11 @@ public class GenderTitles {
         else {
           title = "Mr.";
 
-      }
-    }
+              }
+            }
 
     System.out.println("\n" + title + " " + last);
-    }
+
+    // adding my own example
+  }
 }
