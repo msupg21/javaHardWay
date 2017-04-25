@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class ThirtyDays {
   public static void main(String[] args) {
     Scanner keyboard = new Scanner(System.in);
-    int month, days = 31;
-    String monthName = "error";
+    int rank, month, days = 31;
+    String rank1, rank2 = "Jr. enlisted",  monthName = "error";
 
     System.out.print("Which month? (1-12)" );
     month = keyboard.nextInt();
@@ -54,7 +54,46 @@ have thiry-one days.  Except the second month alone.... */
               break;
 
     }
+
     System.out.println( days + " days hath " + monthName);
+    System.out.println();
+
+
+    System.out.print("What is your rank? ex. E4, E6, etc.:E-");
+    rank = keyboard.nextInt();
+
+    switch (rank) {
+      case 1: rank1 = "1";
+              break;
+      case 2: rank1 = "2";
+              break;
+      case 3: rank1 = "3";
+              break;
+      case 4: rank1 = "4";
+              break;
+      case 5: rank1 = "5";
+              break;
+      case 6: rank1 = "6";
+              break;
+      case 7: rank1 = "7";
+              break;
+      case 8: rank1 = "8";
+              break;
+      case 9: rank1 = "9";
+              break;
+      }
+
+    switch (rank) {
+      case 5:
+      case 6:
+      case 7:
+      case 8:
+      case 9: rank2 = "Sr. enlisted";
+              break;
+      }
+
+    System.out.print("Your rank of E-" + rank + " is condisered " + rank2);
+    System.out.println();
 
   }
 }
