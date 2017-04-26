@@ -66,5 +66,28 @@ public class DictionaryOrder {
   than the int moves to the left a single int, creating a negetive int (which is before 0
   | -1 < 0).   */
 
+  // adding my own example:
+
+  String car;
+
+    System.out.println("Make up a domestic car brand: ");
+    car = keyboard.nextLine();
+
+    if (car.compareTo("ford") < 0)
+      System.out.println(car + " comes before Ford.");
+    if (car.compareTo("ford") == 0)
+      System.out.println(car + " is not a made up domestic car brand.");
+    if (car.compareTo("ford") > 0)
+      System.out.println(car + " comes after Ford.");
+
+    if(car.compareTo("jeep") < 0)
+      System.out.println(car + " comes before jeep.");
+    if(car.compareTo("jeep") == 0)
+      System.out.println(car + " is not a made up domestic car brand.");
+    if(car.compareTo("jeep") > 0)
+      System.out.println(car + " comes after jeep.");
+
+
+
   }
 }
