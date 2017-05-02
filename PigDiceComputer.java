@@ -1,25 +1,71 @@
+import java.util.Scanner;
+
 public class PigDiceComputer {
   public static void main(String[] args) {
-    int roll, total;
-    total = 0;
+    Scanner keyboard = new Scanner(System.in);
+    int roll, ptot, ctot, turnTotal;
+    String choice = "";
+
+    ptot = 0;
+    ctot = 0;
 
     do {
-      roll = 1 + (int)(Math.random()*6);
-      System.out.println("Computer rolled a " + roll);
-      if (roll ==1 ) {
-        System.out.println("\tthat ends its turn.");
-        total = 0;
-      }
-      else {
-        total += roll;
-        System.out.print("\tComputer has " + total);
-        System.out.print(" points so far this round.\n");
-        if (total < 20)
-          System.out.println("\tComputer will roll again.");
+      turnTotal = 0;
+      System.out.println("You have " + ptot + " points." );
+
+      do {
+        roll = 1 + (int)(Math.random()*6);
+        System.out.println("\tYou rolled a " + roll + ".");
+        if (roll == 1 ) {
+          System.out.println("\tThat ends its turn.");
+          turnTotal = 0;
+        }
+        else {
+          turnTotal += roll;
+          System.out.print("\tYou have " + turnTotal + " points.");
+          System.out.print(" so far this round.\n");
+          System.out.print("\tWould you like ot roll again?");
+          System.out.print(" or would you like to hold?");
+          choice = keyboard.next();
+        }
+      } while (roll != 1 && choice.equals("roll"));
+
+      ptot += turnTotal;
+      System.out.println("\tYou end the round with " + ptot + " points.");
+
+      if (ptot < 100) {
+          turnTotal = 0;
+          System.out.println("Computer has " + ctot+ " points.");
+
+          do {
+            roll = 1 + (int)(Math.random()*6);
+            System.out.println("\tComputer rolled a " + roll + ".");
+            if (roll ==1) {
+              System.out.println("\tThat ends its turn.");
+              turnTotal = 0;
+            }
+            else {
+              turnTotal += roll;
+              System.out.print("\tComputer has " + turnTotal);
+              System.out.print(" points so far this round. \n");
+              if (turnTotal < 20) {
+                System.out.println("\tComputer will roll again.");
+              }
+            }
+          } while (roll != 1 && turnTotal < 20);
+
+          ctot += turnTotal;
+          System.out.print("\tComputer ends the round with ");
+          System.out.print(ctot + " points.\n");
       }
 
-  } while (roll != 1 && total < 20);
+    } while (ptot < 100 && ctot < 100);
 
-  System.out.println("Computer ends the round with " + total + " points.");
+    if (ptot > ctot) {
+      System.out.println( "Humanity wins!" );
+    }
+    else {
+      System.out.println( "The computer wins." );
+    }
   }
 }
